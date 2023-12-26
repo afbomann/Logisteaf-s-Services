@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+    font-weight: 550;
+}
+
+li a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5rem;
+}
+
+.logo {
+    margin-right: auto;
+    margin-left: 5%;
+}
+
+.logo a {
+    letter-spacing: 0.2rem;
+}
+
+.lastItem {
+    margin-right: 5%;
+}
+
+.hamburger, .hamburger-x {
+    margin-right: 5%;
+    display: none;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.hamburger div, .hamburger-x div {
+    transition: all 0.2s;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 1rem;
+}
+
+.hamburger:hover, .hamburger-x:hover {
+    cursor: pointer;
+}
+
+.hamburger-x .line2 {
+    opacity: 0;
+}
+
+.hamburger-x .line1 {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger-x .line3 {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.sidebar, .sidebar-active {
+    transition: all 0.2s;
+    width: 100%;
+    height: 0dvh;
+    background-color: #202020;
+    border-radius: 0 0 10px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 7%;
+}
+
+.sidebar li {
+    opacity: 0;
+}
+
+.sidebar-active {
+    height: 40dvh;
+}
+
+.sidebar li, .sidebar-active li {
+    transition: all 0.2s;
+}
+
+@media screen and (max-width: 1000px) {
+    .hamburger, .hamburger-x {
+        display: flex;
+    }
+
+    .item, .lastItem {
+        display: none;
+    }
+}
